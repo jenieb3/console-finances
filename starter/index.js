@@ -100,8 +100,8 @@ for (var i = 0; i < finances.length; i++) {
     netProfit += finances[i][1];
 }
 
-console.log(netProfit);
-console.log('Total: $38382578')
+console.log('Total: ' + '$' + netProfit);
+// console.log('Total: $38382578')
 
 // Total change
 var totalChange = 0;
@@ -110,10 +110,11 @@ for (var i = 1; i < finances.length; i++) {
     totalChange += finances[i][1] - finances[i - 1][1];
 }
 
-var averageChange = totalChange / (finances.length - 1);
+var averageChange = totalChange / (finances.length);
+var averageChange = Math.round(totalChange / (finances.length -1) * 100) / 100;
 
-console.log(averageChange);
-console.log('Average Change: $-2315.12')
+console.log('Average Change: ' + '$' + averageChange);
+// console.log('Average Change: $-2315.12')
 
 // Greatest Increase
 var greatestIncrease = {
@@ -129,8 +130,9 @@ for (var i = 1; i < finances.length; i++) {
     }
 }
 
-console.log(greatestIncrease);
-console.log('Greatest Increase in Profits: ' + 'Feb-2012 $1926159')
+console.log('Greatest Increase in Profits: ' + greatestIncrease.date + ' $' + greatestIncrease.amount);
+// console.log('Greatest Increase in Profits: ' + 'Feb-2012 $1926159')
+
 // Greatest Decrease
 var greatestDecrease = {
     date: finances[0][0],
@@ -145,5 +147,5 @@ for (var i = 1; i < finances.length; i++) {
     }
 }
 
-console.log(greatestDecrease);
-console.log('Greatest Decrease in Profits: ' + 'Sep-2013 $-2196167')
+console.log('Greatest Decrease in Profits: ' + greatestDecrease.date + ' $' + greatestDecrease.amount);
+// console.log('Greatest Decrease in Profits: ' + 'Sep-2013 $-2196167')
