@@ -27,5 +27,5 @@ https://stackoverflow.com/questions/14968615/rounding-to-the-nearest-hundredth-o
 Please refer to license in repo.
 
 ## Screenshot
-![Screenshot](./starter/Screenshot%20consolefinances.png)
+![Screenshot](./Screenshot%20consolefinances.png)
 
